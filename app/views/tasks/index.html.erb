@@ -1,0 +1,11 @@
+<h1>LIST OF TASKS</h1>
+<ul>
+  <% @tasks.each do |item| %>
+  <li>
+  <%= link_to item.title, task_path(item.id) %>
+  <%= check_box_tag "name", "", item.completed %>
+  </li>
+  <% end %>
+
+  <%= link_to "Back Home", home_path %>
+</ul>

@@ -1,0 +1,9 @@
+<h1>Show task detail here</h1>
+<label for="Details of task"></label>
+<h2><% @task.title %></h2>
+<p><%= @task.details  %></p>
+
+<%= link_to "Back to index", index_path %>
+<%= params[:id] %>
+<%= link_to "Update", edit_task_path(params[:id]) %>
+<%= link_to "Destroy", destroy_path(@task.id), method: :delete %>
